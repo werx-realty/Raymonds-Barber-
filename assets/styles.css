@@ -314,6 +314,19 @@ p:last-child { margin-bottom: 0; }
   min-height: 76px;
 }
 .brand { display: inline-flex; align-items: center; gap: var(--s-3); color: var(--white); }
+
+/* Shop logo lockup */
+.brand__logo {
+  display: block;
+  height: 46px;
+  width: auto;
+  transition: opacity var(--dur) var(--ease);
+}
+.brand:hover .brand__logo { opacity: .85; }
+@media (max-width: 520px) { .brand__logo { height: 38px; } }
+
+.brand--footer .brand__logo { height: 60px; }
+@media (max-width: 520px) { .brand--footer .brand__logo { height: 48px; } }
 .brand__mark {
   width: 40px; height: 40px; flex: none;
   display: grid; place-items: center;
